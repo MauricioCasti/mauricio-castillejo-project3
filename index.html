@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Timed Typing Test App</title>
     <script src="script.js" async></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,10 +21,16 @@
         <section class="test-area">
             <div id="origin-text">
                 <p id="type-test">Please choose a test before starting</p>
+                <select class="toggle-hide" name="test-selection" id="select" onchange="getTest()" placeholder="Please choose a test">
+                    <option value="null">Please choose a test</option>
+                    <option value="test1">Test 1</option>
+                    <option value="test2">Test 2</option>
+                    <option value="test3">Test 3</option>
+                </select>
             </div><!-- #origin-text -->
 
                 <div class="test-wrapper" id="border-color">
-                    <textarea id="test-area" name="textarea" rows="6" oninput="startTime()" placeholder="The clock starts when you start typing."></textarea>
+                    <textarea id="test-area" name="textarea" rows="6" oninput="textCheck()" placeholder="The clock starts when you start typing."></textarea>
                 </div><!-- .test-wrapper -->
 
             <div class="meta">
@@ -33,8 +39,12 @@
                 </section>
 
                 <button id="reset" onclick="reset()">Start over</button>
-                <button id="start" onclick="startTime()">Start</button>
+                
+                <!-- <button id="start" onclick="startTime()">Start</button> -->
             </div><!-- .meta -->
+            <div>
+                <p class="finished" id="mistakes"></p>
+            </div>
         </section><!-- .test-area -->
     </main>
 
