@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<head>
+<html lang="en-US" class="img">
+<head class>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Timed Typing Test App</title>
@@ -21,7 +20,9 @@
         <section class="test-area">
             <div id="origin-text">
                 <p id="type-test">Please choose a test before starting</p>
-                <select class="toggle-hide" name="test-selection" id="select" onchange="getTest()" placeholder="Please choose a test">
+                <!-- onchange updates the html with a call function from the selection element 
+                    https://stackoverflow.com/questions/647282/is-there-an-onselect-event-or-equivalent-for-html-select -->
+                <select class="toggle-hide" name="test-selection" id="select" onchange="getTest()">
                     <option value="null">Please choose a test</option>
                     <option value="test1">Test 1</option>
                     <option value="test2">Test 2</option>
@@ -42,8 +43,9 @@
                 
                 <!-- <button id="start" onclick="startTime()">Start</button> -->
             </div><!-- .meta -->
-            <div>
-                <p class="finished" id="mistakes"></p>
+            <div class="ending-text">
+                <p id="mistakes"></p>
+                <p id="score-board"></p>
             </div>
         </section><!-- .test-area -->
     </main>

@@ -122,7 +122,7 @@ body {
 .intro {
     padding: 2em 2em;
     color: #ffffff;
-    background: #429890;
+    background: #29306e;
 }
 
 
@@ -168,10 +168,17 @@ body {
     flex-wrap: wrap;
 }
 
+.img{
+    background-image: url(https://www.popsci.com/uploads/2021/02/18/PLD3G6BYOFDDNEDBPHI7G2VSZM.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
 .timer {
     font-size: 3em;
     font-weight: bold;
     white-space: nowrap;
+    text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white;
 }
 
 #reset {
@@ -190,9 +197,11 @@ body {
 
 .toggle-hide{
     display:block;
+    margin-bottom:10px;
 }
 
-.finished{
-    padding: 1em 1em;
+.ending-text p{
+    padding: 10px;
     font-size: 1.5em;
+    text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white;
 }
