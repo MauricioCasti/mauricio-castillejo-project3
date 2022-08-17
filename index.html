@@ -20,19 +20,20 @@
         </article><!-- .intro -->
         <section class="test-area">
             <div id="origin-text">
-                <p>The text to test.</p>
+                <p id="type-test">Please choose a test before starting</p>
             </div><!-- #origin-text -->
 
-            <div class="test-wrapper">
-                <textarea id="test-area" name="textarea" rows="6" placeholder="The clock starts when you start typing."></textarea>
-            </div><!-- .test-wrapper -->
+                <div class="test-wrapper" id="border-color">
+                    <textarea id="test-area" name="textarea" rows="6" oninput="startTime()" placeholder="The clock starts when you start typing."></textarea>
+                </div><!-- .test-wrapper -->
 
             <div class="meta">
                 <section id="clock">
-                    <div class="timer">00:00:00</div>
+                    <div class="timer" id="timer">00:00:000</div>
                 </section>
 
-                <button id="reset">Start over</button>
+                <button id="reset" onclick="reset()">Start over</button>
+                <button id="start" onclick="startTime()">Start</button>
             </div><!-- .meta -->
         </section><!-- .test-area -->
     </main>

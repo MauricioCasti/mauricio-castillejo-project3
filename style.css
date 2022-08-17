@@ -171,6 +171,7 @@ body {
 .timer {
     font-size: 3em;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 #reset {
